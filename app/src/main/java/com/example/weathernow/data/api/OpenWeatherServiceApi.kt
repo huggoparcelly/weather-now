@@ -1,9 +1,11 @@
-package com.example.weathernow
+package com.example.weathernow.data.api
 
+import com.example.weathernow.data.model.CurrentWeatherData
+import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-interface OpenWeatherService {
+interface OpenWeatherServiceApi {
 
     //    https://api.openweathermap.org/data/2.5/
     //    weather?q={city name}&appid={API key}
@@ -12,6 +14,5 @@ interface OpenWeatherService {
     fun getCurrentWeatherData(
         @Query("q") cityName: String,
         @Query("appid") apiKey: String,
-        @Query("units") units: String = "metric"
-    )
+        @Query("units") units: String = "metric"): Call<CurrentWeatherData>
 }
