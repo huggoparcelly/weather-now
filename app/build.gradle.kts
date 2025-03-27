@@ -62,4 +62,6 @@ dependencies {
     implementation(libs.retrofit)
     // Retrofit with gson Converter
     implementation(libs.converter.gson)
+    // Coroutines
+    implementation(libs.kotlinx.coroutines.android)
 }
